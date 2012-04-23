@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+ENV['RAILS_ENV'] = 'test'
+executor = ENV['EXECUTOR_NUMBER']
+
+if ENV['BUNDLE'] == 'true'
+  system("bundle install --without development")
+end
+
+system "bundle exec rspec --format HudsonFormatter"
+
+exit(0)
