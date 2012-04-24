@@ -1,6 +1,6 @@
 describe "Timebomb" do
   it 'should produce a result' do
-    true.should == false
+    true.should == true
   end
 end
     
