@@ -4,6 +4,7 @@ describe "Timebomb" do
   end
   
   it 'should produce a result' do
+    puts "ENV[RESULT] = #{ENV['RESULT']}"
     result = ENV['RESULT'] == "FAILURE" ? false : true
     true.should == result
   end
