@@ -1,6 +1,11 @@
 describe "Timebomb" do
-  it 'should fail' do
-    true.should be_false
+  before :all do
+    sleep ENV["SLEEP"].to_i if ENV["SLEEP"]
+  end
+  
+  it 'should produce a result' do
+    result = ENV['RESULT'] == "FAILURE" ? false : true
+    true.should == result
   end
 end
     
